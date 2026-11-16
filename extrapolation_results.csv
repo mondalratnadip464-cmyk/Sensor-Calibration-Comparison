@@ -1,0 +1,11 @@
+sensor,method,rmse,max_abs
+A,none,0.6633,1.6
+A,offset,1.768,2.62
+A,linear,0.6975,1.2264
+A,quadratic,1.1109,1.9742
+A,quadratic+trim,0.9922,1.7822
+B,none,1.848,3.64
+B,offset,1.325,2.2288
+B,linear,2.0515,4.199
+B,quadratic,17.1034,29.3801
+B,quadratic+trim,0.4536,1.2138

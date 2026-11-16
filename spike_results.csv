@@ -1,0 +1,5 @@
+sensor,fit,trimmed_points,test_rmse,test_max_abs
+A,linear,0,0.6022,1.2907
+A,linear+trim,3,0.3673,0.8155
+B,linear,0,1.2904,2.9591
+B,linear+trim,1,1.2887,2.9684

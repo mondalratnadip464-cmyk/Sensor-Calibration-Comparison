@@ -1,0 +1,28 @@
+test_errors_and_mean_error (test_calibration.TestCalibrationRun.test_errors_and_mean_error) ... ok
+test_getitem_index_and_slice (test_calibration.TestCalibrationRun.test_getitem_index_and_slice) ... ok
+test_group_into_runs (test_calibration.TestCalibrationRun.test_group_into_runs) ... ok
+test_invalid_construction (test_calibration.TestCalibrationRun.test_invalid_construction) ... ok
+test_iter (test_calibration.TestCalibrationRun.test_iter) ... ok
+test_len (test_calibration.TestCalibrationRun.test_len) ... ok
+test_error_handling (test_calibration.TestCalibrator.test_error_handling) ... ok
+test_linear_recovers_exact_gain_and_offset (test_calibration.TestCalibrator.test_linear_recovers_exact_gain_and_offset) ... ok
+test_offset_removes_constant_error (test_calibration.TestCalibrator.test_offset_removes_constant_error) ... ok
+test_quadratic_recovers_curved_sensor (test_calibration.TestCalibrator.test_quadratic_recovers_curved_sensor) ... ok
+test_trim_resists_a_spike (test_calibration.TestCalibrator.test_trim_resists_a_spike) ... ok
+test_load_csv_counts_valid_and_rejected (test_calibration.TestLoadCsv.test_load_csv_counts_valid_and_rejected) ... ok
+test_missing_column_raises (test_calibration.TestLoadCsv.test_missing_column_raises) ... ok
+test_metrics_on_known_values (test_calibration.TestMetrics.test_metrics_on_known_values) ... ok
+test_outlier_mask_flags_spike (test_calibration.TestMetrics.test_outlier_mask_flags_spike) ... ok
+test_best_methods (test_calibration.TestPipelineOnSampleData.test_best_methods) ... ok
+test_every_correction_improves_on_no_correction (test_calibration.TestPipelineOnSampleData.test_every_correction_improves_on_no_correction) ... ok
+test_no_trial_is_in_both_train_and_test (test_calibration.TestPipelineOnSampleData.test_no_trial_is_in_both_train_and_test) ... ok
+test_row_counts (test_calibration.TestPipelineOnSampleData.test_row_counts) ... ok
+test_is_valid_reading_range (test_calibration.TestValidation.test_is_valid_reading_range) ... ok
+test_parse_float_good_and_bad (test_calibration.TestValidation.test_parse_float_good_and_bad) ... ok
+test_validate_row_accepts_good_row (test_calibration.TestValidation.test_validate_row_accepts_good_row) ... ok
+test_validate_row_rejects_bad_rows (test_calibration.TestValidation.test_validate_row_rejects_bad_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.039s
+
+OK

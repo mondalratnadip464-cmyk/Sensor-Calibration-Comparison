@@ -1,0 +1,6 @@
+Rejected rows (line number, reason, original row)
+line 38: raw reading outside valid range (sensor fault?) -> {'sensor': 'B', 'trial': '4', 'reference_c': '60.0', 'raw_c': '999.0'}
+line 109: raw reading missing or not numeric -> {'sensor': 'A', 'trial': '3', 'reference_c': '45.0', 'raw_c': ''}
+line 234: trial must be a whole number >= 1 -> {'sensor': 'B', 'trial': '0', 'reference_c': '25.0', 'raw_c': '26.4'}
+line 235: missing sensor id -> {'sensor': '', 'trial': '2', 'reference_c': '30.0', 'raw_c': '31.2'}
+line 260: reference value missing or not numeric -> {'sensor': 'A', 'trial': '5', 'reference_c': 'abc', 'raw_c': '52.0'}

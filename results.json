@@ -1,0 +1,222 @@
+{
+  "input_rows": 265,
+  "valid_rows": 260,
+  "rejected_rows": 5,
+  "rejected_reasons": [
+    "raw reading outside valid range (sensor fault?)",
+    "raw reading missing or not numeric",
+    "trial must be a whole number >= 1",
+    "missing sensor id",
+    "reference value missing or not numeric"
+  ],
+  "runs": 20,
+  "train_trials": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "train_readings": 182,
+  "test_readings": 78,
+  "sensor_summary": [
+    {
+      "sensor": "A",
+      "readings": 130,
+      "mean_error": -1.076,
+      "std_error": 1.908,
+      "min_error": -14.36,
+      "max_error": 9.03,
+      "mae": 1.309
+    },
+    {
+      "sensor": "B",
+      "readings": 130,
+      "mean_error": 1.727,
+      "std_error": 1.67,
+      "min_error": -0.92,
+      "max_error": 13.55,
+      "mae": 1.752
+    }
+  ],
+  "heldout_results": [
+    {
+      "sensor": "A",
+      "method": "none",
+      "bias": -1.0008,
+      "mae": 1.0705,
+      "rmse": 1.2912,
+      "max_abs": 2.88,
+      "improvement_pct": 0.0
+    },
+    {
+      "sensor": "A",
+      "method": "offset",
+      "bias": 0.1077,
+      "mae": 0.6815,
+      "rmse": 0.8229,
+      "max_abs": 1.7715,
+      "improvement_pct": 36.2673
+    },
+    {
+      "sensor": "A",
+      "method": "linear",
+      "bias": 0.101,
+      "mae": 0.4985,
+      "rmse": 0.6022,
+      "max_abs": 1.2907,
+      "improvement_pct": 53.3559
+    },
+    {
+      "sensor": "A",
+      "method": "quadratic",
+      "bias": 0.105,
+      "mae": 0.5055,
+      "rmse": 0.6103,
+      "max_abs": 1.1548,
+      "improvement_pct": 52.7323
+    },
+    {
+      "sensor": "B",
+      "method": "none",
+      "bias": 1.6644,
+      "mae": 1.6726,
+      "rmse": 2.1176,
+      "max_abs": 5.02,
+      "improvement_pct": 0.0
+    },
+    {
+      "sensor": "B",
+      "method": "offset",
+      "bias": -0.0898,
+      "mae": 1.1277,
+      "rmse": 1.3123,
+      "max_abs": 3.2658,
+      "improvement_pct": 38.0297
+    },
+    {
+      "sensor": "B",
+      "method": "linear",
+      "bias": -0.0908,
+      "mae": 1.1289,
+      "rmse": 1.2904,
+      "max_abs": 2.9591,
+      "improvement_pct": 39.0632
+    },
+    {
+      "sensor": "B",
+      "method": "quadratic",
+      "bias": -0.0933,
+      "mae": 0.2966,
+      "rmse": 0.3882,
+      "max_abs": 1.3046,
+      "improvement_pct": 81.6653
+    }
+  ],
+  "best_method": {
+    "A": "linear",
+    "B": "quadratic"
+  },
+  "formulas": {
+    "A/linear": "corrected = 0.9382*raw + 4.132",
+    "A/offset": "corrected = 1.0000*raw + 1.108",
+    "A/quadratic": "corrected = -0.00025*raw^2 + 0.9622*raw + 3.638",
+    "B/linear": "corrected = 1.0115*raw + -2.348",
+    "B/offset": "corrected = 1.0000*raw + -1.754",
+    "B/quadratic": "corrected = -0.00368*raw^2 + 1.4021*raw + -11.476"
+  },
+  "extrapolation": [
+    {
+      "sensor": "A",
+      "method": "none",
+      "rmse": 0.6633,
+      "max_abs": 1.6
+    },
+    {
+      "sensor": "A",
+      "method": "offset",
+      "rmse": 1.768,
+      "max_abs": 2.62
+    },
+    {
+      "sensor": "A",
+      "method": "linear",
+      "rmse": 0.6975,
+      "max_abs": 1.2264
+    },
+    {
+      "sensor": "A",
+      "method": "quadratic",
+      "rmse": 1.1109,
+      "max_abs": 1.9742
+    },
+    {
+      "sensor": "A",
+      "method": "quadratic+trim",
+      "rmse": 0.9922,
+      "max_abs": 1.7822
+    },
+    {
+      "sensor": "B",
+      "method": "none",
+      "rmse": 1.848,
+      "max_abs": 3.64
+    },
+    {
+      "sensor": "B",
+      "method": "offset",
+      "rmse": 1.325,
+      "max_abs": 2.2288
+    },
+    {
+      "sensor": "B",
+      "method": "linear",
+      "rmse": 2.0515,
+      "max_abs": 4.199
+    },
+    {
+      "sensor": "B",
+      "method": "quadratic",
+      "rmse": 17.1034,
+      "max_abs": 29.3801
+    },
+    {
+      "sensor": "B",
+      "method": "quadratic+trim",
+      "rmse": 0.4536,
+      "max_abs": 1.2138
+    }
+  ],
+  "spike_experiment": [
+    {
+      "sensor": "A",
+      "fit": "linear",
+      "trimmed_points": 0,
+      "test_rmse": 0.6022,
+      "test_max_abs": 1.2907
+    },
+    {
+      "sensor": "A",
+      "fit": "linear+trim",
+      "trimmed_points": 3,
+      "test_rmse": 0.3673,
+      "test_max_abs": 0.8155
+    },
+    {
+      "sensor": "B",
+      "fit": "linear",
+      "trimmed_points": 0,
+      "test_rmse": 1.2904,
+      "test_max_abs": 2.9591
+    },
+    {
+      "sensor": "B",
+      "fit": "linear+trim",
+      "trimmed_points": 1,
+      "test_rmse": 1.2887,
+      "test_max_abs": 2.9684
+    }
+  ]
+}
